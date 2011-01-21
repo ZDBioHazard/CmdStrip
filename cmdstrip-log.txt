@@ -1,0 +1,42 @@
+/**********************************************************************
+* CmdStrip! - So they locked you out of the "run box" eh?
+* Copyright (C) 2005 BioHazard / Vectec Software
+***********************************************************************
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 3 or any later version.
+*
+* This program is distributed in the hope that it will be useful, but
+* WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+***********************************************************************
+* cmdstrip-log.txt : Documentation of changes
+**********************************************************************/
+
+*-- Stuff left to do --*
+	* None
+
+*-- Known Bugs --*
+	* None
+
+/////////////////////////////////////////////////////////////
+
+!-- Version 2.5 --!
+	*-- May 20th 2006 --*
+		* Change : Tons of changes everywhere, just
+					a few lines short of a total rewrite.
+		* Added  : Command history
+		* Added  : "exit" command
+		* Added  : Configuration (right-click)
+
+!-- Version 2.1 --!
+	*-- Jan 3rd 2006 --*
+		* Fixed : Win9x compatibility is back.
+
+!-- Version 2.0 --!
+	*-- Oct 25th 2005 --*
+		* Change: Total re-code. Undocumented.
+
+!-- Version 1.0 --!
+	*-- May 21st 2005 --*
+		* Initial release

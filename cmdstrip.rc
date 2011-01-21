@@ -1,0 +1,79 @@
+/**********************************************************************
+* CmdStrip! - So they locked you out of the "run box" eh?
+* Copyright (C) 2005 BioHazard / Vectec Software
+***********************************************************************
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 3 or any later version.
+*
+* This program is distributed in the hope that it will be useful, but
+* WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+***********************************************************************
+* cmdstrip.rc : All the resource stuff
+**********************************************************************/
+#include "cmdstrip.h"
+ICO_ICON ICON DISCARDABLE "ico_icon.ico"
+BMP_ABOUT BITMAP DISCARDABLE "bmp_about.bmp"
+
+DLG_ABOUT DIALOG DISCARDABLE 0,0,212,70
+STYLE DS_CENTER|WS_POPUP|WS_CAPTION|WS_SYSMENU
+CAPTION "About CmdStrip"
+FONT 8,"MS Sans Serif"
+BEGIN
+	CONTROL BMP_ABOUT,IDC_STATIC,"Static",SS_BITMAP|SS_REALSIZEIMAGE,0,0,212,38
+	LTEXT "CmdStrip V2.5 (May 20th 2006)\nCopyright (c) 2006 BioHazard Software\nhttp://biohazard.drdteam.org/",IDC_STATIC,4,42,124,24
+	RTEXT "Thanks/Greetz to:\nXyrus && Sabin",IDC_STATIC,132,42,76,24
+END
+
+DLG_CONFIG DIALOG DISCARDABLE 0,0,156,58
+STYLE DS_MODALFRAME|WS_POPUP|WS_CAPTION|WS_SYSMENU
+CAPTION "CmdStrip - Configuration"
+FONT 8,"MS Sans Serif"
+BEGIN
+	CTEXT "X",IDC_STATIC,4,8,12,12,SS_CENTERIMAGE
+	GROUPBOX "Position / Size",IDC_STATIC,4,0,148,24
+	EDITTEXT EDT_X,16,8,36,12,ES_READONLY
+	CONTROL "",SPN_X,"msctls_updown32",UDS_SETBUDDYINT|UDS_ALIGNRIGHT|UDS_AUTOBUDDY|UDS_ARROWKEYS|UDS_NOTHOUSANDS,44,8,8,12
+	CTEXT "Y",IDC_STATIC,52,8,12,12,SS_CENTERIMAGE
+	EDITTEXT EDT_Y,64,8,36,12,ES_READONLY
+	CONTROL "",SPN_Y,"msctls_updown32",UDS_SETBUDDYINT|UDS_ALIGNRIGHT|UDS_AUTOBUDDY|UDS_ARROWKEYS|UDS_NOTHOUSANDS,92,8,8,12
+	CTEXT "W",IDC_STATIC,100,8,12,12,SS_CENTERIMAGE
+	EDITTEXT EDT_W,112,8,36,12,ES_READONLY
+	CONTROL "",SPN_W,"msctls_updown32",UDS_SETBUDDYINT|UDS_ALIGNRIGHT|UDS_AUTOBUDDY|UDS_ARROWKEYS|UDS_NOTHOUSANDS,140,8,8,12
+	LTEXT "History States",IDC_STATIC,4,28,48,12,SS_CENTERIMAGE
+	EDITTEXT EDT_HST,52,28,28,12,ES_READONLY
+	CONTROL "",SPN_HST,"msctls_updown32",UDS_SETBUDDYINT|UDS_ALIGNRIGHT|UDS_AUTOBUDDY|UDS_ARROWKEYS|UDS_NOTHOUSANDS,72,28,8,12
+	CONTROL "Use '*' DOS prefix",CHK_DOS,"Button",BS_AUTOCHECKBOX|BS_LEFTTEXT|BS_RIGHT|WS_TABSTOP,84,28,68,12
+	DEFPUSHBUTTON "OK",BTN_OK,112,44,40,12
+	PUSHBUTTON "Cancel",BTN_CANCEL,4,44,40,12
+END
+
+MNU_MENU MENU DISCARDABLE BEGIN
+	POPUP "Main" BEGIN
+		MENUITEM "Configuration",MNU_CONFIG
+		MENUITEM "About",MNU_ABOUT
+		MENUITEM "Exit\tAlt+F4",MNU_EXIT
+	END
+END
+
+VER_VERSION VERSIONINFO
+	FILEVERSION 2,5,0,0
+	PRODUCTVERSION 2,5,0,0
+	FILEFLAGSMASK 0x3F
+	FILEFLAGS 0x2
+	FILEOS 0x4
+	FILETYPE 0x1
+BEGIN
+    BLOCK "StringFileInfo" BEGIN BLOCK "040904b0" BEGIN
+        VALUE "Comments", "Start->Run replacement.\0"
+        VALUE "CompanyName", "BioHazard Software\0"
+        VALUE "FileDescription", "CmdStrip command-line access.\0"
+        VALUE "FileVersion", "2.5 BETA 1\0"
+        VALUE "InternalName", "CmdStrip\0"
+        VALUE "LegalCopyright", "Copyright © 2004-2006 BioHazard\0"
+        VALUE "OriginalFilename", "CmdStrip.exe\0"
+        VALUE "ProductName", "CmdStrip\0"
+        VALUE "ProductVersion", "2.5\0"
+    END END
+END
